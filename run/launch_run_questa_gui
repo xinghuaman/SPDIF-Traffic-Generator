@@ -1,0 +1,6 @@
+quit -sim
+vlib work
+vlog -f spdif_comp.f
+vsim -wlfcollapsedelta +UVM_TESTNAME=spdif_test_stops -do vsim.do -c spdif_tb_top
+run 
+
