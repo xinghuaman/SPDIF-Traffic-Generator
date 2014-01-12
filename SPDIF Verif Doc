@@ -1,0 +1,49 @@
+SPDIF traffic generator:
+
+The purpose of this UVC is:
+-	Generate random SPDIF, using Manchester coding.
+-	Stop traffic at any time with in Block or Frame.
+-	Generate non Manchester coding
+-	Monitor SPDIF traffic, detect the clock frequency and convert it to parallel data.
+The different configuration of the traffic generator is described below:
+•	Block number (block_nb)
+•	Clean stop of the traffic (clean_stop)
+•	In Frame stop (in_frame_stop)
+•	In Block stop (in_block_stop)
+•	Dirty stop of the traffic (in_frame_stop)
+•	Manchester coding (coding_type, 1 when machester)
+Spdif Monitor:
+•	Detect SPDIF clock frequency.
+•	Convert data from SPDIF to Parallel
+Checker:
+•	 Check Frame length
+•	Check Block length
+•	Check Frame kind
+Coverage:
+•	clean_stop_e
+•	in_block_stop_e
+•	in_frame_stop_e
+Sequence library:
+•	Simple seq:  it sends a block without any interrupts within it and with Manchester coding.
+•	 spdif_no_traffic_seq:no traffic is generated
+•	spdif_clean_stop_seq: Traffic stopped in a clean way
+•	spdif_in_frame_stop_seq: Traffic stopped inside  Frame
+•	spdif_in_block_stop_seq: Traffic stopped inside a Block.
+•	spdif_no_stop_seq: No stop in traffic.
+•	spdif_man_coding_seq: Manchester coding traffic.
+
+
+You can add as many sequences and tests as you want, also you can add checkers , cover points, …
+
+To run this example you need Mentor Modelsim.
+1.	 Open Modelsim
+2.	Compil the RTL if any.
+3.	Go under “run” directory
+4.	source  “launch_run_questa_gui”
+5.	Enjoy!
+
+
+
+If any comments or questions feel free to tell me 
+Thanks a lot.
+Zied.sassi@gmail.com
