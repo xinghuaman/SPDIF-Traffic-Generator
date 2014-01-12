@@ -14,15 +14,15 @@ module spdif_tb_top;
    spdif_if m_if ();
    logic rst_n;
 
-    aes3rx aes3rx_inst (
-         .clk(m_if.iClk),      
-         .reset(~rst_n),           
-         .sdata(),           
-         .sclk(),           
-         .bsync(),           
-         .lrck(),           
-         .aes3(m_if.iSPDIFin)
-   );      
+ //   aes3rx aes3rx_inst (
+ //        .clk(m_if.iClk),      
+ //        .reset(~rst_n),           
+ //        .sdata(),           
+ //        .sclk(),           
+ //        .bsync(),           
+ //        .lrck(),           
+ //        .aes3(m_if.iSPDIFin)
+ //  );      
  
   initial begin
     run_test();
